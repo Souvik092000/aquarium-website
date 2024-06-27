@@ -3,10 +3,12 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #1a1a1a; /* Darker background for header */
     color: #fff;
     padding: 1rem;
     text-align: center;
@@ -26,7 +28,7 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-    color: #FFEB3B;
+    color: #FFEB3B; /* Yellow color for hover */
 }
 
 .alert {
@@ -36,13 +38,13 @@ nav a:hover {
 }
 
 .alert-success {
-    background-color: #DFF2BF;
-    color: #4F8A10;
+    background-color: #4CAF50; /* Green background for success alert */
+    color: #fff;
 }
 
 .alert-danger {
-    background-color: #F8D7DA;
-    color: #8A1F11;
+    background-color: #f44336; /* Red background for danger alert */
+    color: #fff;
 }
 
 .container {
@@ -57,14 +59,14 @@ nav a:hover {
 
 h1, h2 {
     font-family: 'Roboto', Arial, sans-serif;
-    color: #333;
+    color: #FFEB3B; /* Yellow color for headings */
 }
 
 .card {
     border: none;
-    background-color: #a7e6ff;
+    background-color: #1a1a1a; /* Dark background for cards */
     border-radius: 5%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease; 
     height: 100%;
     display: flex;
@@ -82,12 +84,12 @@ h1, h2 {
 
 .card-title {
     font-size: 1.5rem;
-    color: #007bff;
+    color: #FFEB3B; /* Yellow color for card titles */
     margin-bottom: 10px;
 }
 
 .card-text {
-    color: #666;
+    color: #ccc; /* Light gray color for card text */
     margin-bottom: 10px;
 }
 
@@ -106,15 +108,15 @@ h1, h2 {
 .btn {
     font-size: 1.25rem;
     padding: 0.75rem;
-    background-color: #4CAF50;
-    color: #fff;
+    background-color: #FFEB3B; /* Yellow background for buttons */
+    color: #000; /* Black text for buttons */
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #45A049;
+    background-color: #FFD700; /* Darker yellow on hover */
 }
 
 .invalid-feedback {
@@ -127,7 +129,7 @@ h1, h2 {
 }
 
 footer {
-    background-color: #343a40;
+    background-color: #1a1a1a; /* Darker background for footer */
     color: #fff;
     padding: 1rem 0;
     text-align: center;
@@ -146,7 +148,7 @@ footer {
 }
 
 .footer-social a:hover {
-    color: #FFEB3B;
+    color: #FFEB3B; /* Yellow color for hover */
 }
 
 .footer-content p {
