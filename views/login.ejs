@@ -1,0 +1,41 @@
+<%- include('partials/header') %>
+<div class="container my-5">
+    <h2 class="text-center mb-4">Login</h2>
+    <form action="/auth/login" method="POST" class="needs-validation" novalidate>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+            <div class="invalid-feedback">
+                Please enter a valid email address.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" required>
+            <div class="invalid-feedback">
+                Please enter your password.
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+    </form>
+</div>
+<%- include('partials/footer') %>
+
+<script>
+    // JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>

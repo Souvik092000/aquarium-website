@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Aquarium Website</title>
+</head>
+<body>
+    <header class="bg-dark text-white py-3">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="/">
+                    <img src="/images/logo.png" alt="FishBowl Logo" class="logo" >
+                    FishBowl
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/products">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact</a>
+                        </li>
+                        <% if (user) { %>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/profile">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/auth/logout">Logout</a>
+                            </li>
+                        <% } else { %>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/auth/login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/auth/register">Register</a>
+                            </li>
+                        <% } %>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="py-4">
+        <div class="container">
+            <% if (success_msg) { %>
+                <div class="alert alert-success"><%= success_msg %></div>
+            <% } %>
+            <% if (error_msg) { %>
+                <div class="alert alert-danger"><%= error_msg %></div>
+            <% } %>
+            <% if (error) { %>
+                <div class="alert alert-danger"><%= error %></div>
+            <% } %>
+        </div>
+    </main>
+</body>
+</html>

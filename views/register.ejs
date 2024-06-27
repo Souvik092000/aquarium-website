@@ -1,0 +1,55 @@
+<%- include('partials/header') %>
+<div class="container my-5">
+    <h2 class="text-center mb-4">Register</h2>
+    <form action="/auth/register" method="POST" class="needs-validation" novalidate>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+            <div class="invalid-feedback">
+                Please enter your name.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+            <div class="invalid-feedback">
+                Please enter a valid email address.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" required>
+            <div class="invalid-feedback">
+                Please enter your password.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password2">Confirm Password:</label>
+            <input type="password" name="password2" id="password2" class="form-control" placeholder="Confirm your password" required>
+            <div class="invalid-feedback">
+                Please confirm your password.
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Register</button>
+    </form>
+</div>
+<%- include('partials/footer') %>
+
+<script>
+    // JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
