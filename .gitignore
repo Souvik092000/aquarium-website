@@ -1,0 +1,8 @@
+# (Copy and paste the contents above into the .gitignore file, then save and exit) # Add .gitignore to the staging area
+git add .gitignore
+
+# Commit the .gitignore file
+git commit -m "Add .gitignore file"
+
+# Push the changes to the remote repository
+git push -u origin main
