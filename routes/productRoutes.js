@@ -4,7 +4,7 @@ const productController = require('../controllers/productController');
 const { ensureAuthenticated } = require('../config/auth');
 
 router.get('/', productController.getAllProducts);
-router.get('/add', ensureAuthenticated, productController.addProductPage);
+router.get('/addProduct', ensureAuthenticated, (req, res) => res.render('addProduct'));
 router.post('/add', ensureAuthenticated, productController.addProduct);
 router.get('/:id', productController.getProduct);
 router.get('/edit/:id', ensureAuthenticated, productController.editProductPage);
